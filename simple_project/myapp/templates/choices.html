@@ -1,0 +1,10 @@
+{% if choice_text %}
+<ul>
+    <b>Choices for this question</b>
+    {% for i in choice_text %}
+    <br>{{ i }}</br>
+    {% endfor %}
+</ul>
+{% else %}
+<p>No polls are available.</p>
+{% endif %}

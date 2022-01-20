@@ -1,0 +1,11 @@
+{% if latest_question_list %}
+<ul>
+    {% for question in latest_question_list %}
+    <b>Question: {{question.id}}</b>
+    <li><a href="/myapp/{{ question.id }}/">Question Object</a></li>
+    <li><a href="/myapp/{{ question.id }}/showQuestionChoices/">Question Choices</a></li>
+    {% endfor %}
+</ul>
+{% else %}
+<p>No polls are available.</p>
+{% endif %}
